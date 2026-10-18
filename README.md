@@ -1,6 +1,6 @@
 # wyreanderson.com
 
-Portfólio monocromático em Next.js App Router e TypeScript. V1 sem projetos públicos, backend ou tracking.
+Portfólio monocromático em Next.js App Router e TypeScript. Primeiro projeto público: WyreFi Cam. Sem backend ou tracking.
 
 ## Desenvolvimento
 

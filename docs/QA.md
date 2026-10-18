@@ -48,3 +48,9 @@ Comandos adicionais executados: `pnpm view next version`, `pnpm view react versi
 ## Atualização do GitHub
 
 Perfil confirmado pelo proprietário: https://github.com/Wyreanderson. Links ativados no cabeçalho, hero e rodapé; aviso Coming soon do GitHub removido automaticamente. Suite de 9 testes repetida com sucesso e TypeScript aprovado. Capturas atualizadas. Apenas o contacto permanece nulo; referências anteriores a GitHub pendente registam o estado inicial da V1.
+
+## Primeiro projeto real — WyreFi Cam
+
+Autorizado pelo proprietário através do link https://github.com/Wyreanderson/WyreFi-Cam. Metadados e README públicos consultados: repositório público, licença MIT, TypeScript, webcam iPhone via Safari/WebRTC para OBS, self-hosted. Nenhum código desse repositório foi executado ou alterado.
+
+Adicionado como destaque publicado nas categorias open-source e self-hosted, com ligação apenas ao repositório. Nenhuma demo ou download foi presumido. Os quatro placeholders desaparecem conforme a regra original; há agora um cartão real. O estado vazio continua suportado e o filtro vazio é testado. Lint, TypeScript, 9 testes e build passaram; capturas atualizadas nas quatro larguras. Esta alteração substitui o requisito inicial de conteúdo vazio por autorização explícita do proprietário.

@@ -3,7 +3,8 @@ import AxeBuilder from "@axe-core/playwright";
 import { projects } from "../src/content/projects";
 import { featuredProjects, safeUrl } from "../src/lib/projects";
 test("content and URL safety", () => {
-  expect(projects).toEqual([]);
+  expect(featuredProjects(projects)).toHaveLength(1);
+  expect(featuredProjects([])).toEqual([]);
   for (const url of [
     "",
     "javascript:alert(1)",
@@ -34,7 +35,7 @@ for (const [name, width, height] of [
   ["mobile", 390, 844],
   ["small-mobile", 360, 800],
 ] as const) {
-  test(`${name}: layout, empty state, links and accessibility`, async ({
+  test(`${name}: layout, featured project, links and accessibility`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height });
@@ -48,7 +49,13 @@ for (const [name, width, height] of [
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
       "Building open-source & self-hosted projects",
     );
-    await expect(page.locator(".placeholder")).toHaveCount(4);
+    await expect(page.locator(".placeholder")).toHaveCount(0);
+    await expect(page.locator(".project-card")).toHaveCount(1);
+    await expect(page.locator(".project-card h3")).toHaveText("WyreFi Cam");
+    await expect(page.locator(".project-card a")).toHaveAttribute(
+      "href",
+      "https://github.com/Wyreanderson/WyreFi-Cam",
+    );
     await expect(page.locator('a[href="#"]')).toHaveCount(0);
     await expect(
       page.locator('.hero-actions a[href="https://github.com/Wyreanderson"]'),

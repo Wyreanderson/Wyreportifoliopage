@@ -4,7 +4,7 @@ Leia primeiro `CODEX_SUPERPROMPT.md`, `IMPLEMENTATION_PLAN.md` e `docs/approved-
 
 - Trabalhe **somente neste repositório**. Não alterar pastas-irmãs e outras iniciativas do utilizador.
 - Referência visual é uma meta de UI, não arquivo a ser renderizado como screenshot.
-- V1 sem projetos reais: `src/content/projects.ts` vazio; quatro placeholders honestos “Coming soon”.
+- Projetos reais apenas quando fornecidos ou aprovados pelo proprietário. WyreFi Cam autorizado; quatro placeholders “Coming soon” apenas quando não há destaques publicados.
 - Idioma do site inglês; relatórios para o utilizador em português.
 - Não criar links fictícios, páginas falsas, mock de downloads, nem inventar URLs, email ou GitHub handle.
 - Não fazer deploy, alteração DNS, publicar ou dar push remoto sem aprovação explícita.
@@ -21,3 +21,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
