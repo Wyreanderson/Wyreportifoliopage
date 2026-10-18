@@ -29,5 +29,6 @@ export const projects: Project[] = [
     status: "published",
     featured: true,
     repoUrl: "https://github.com/Wyreanderson/WyreFi-Cam",
+    coverImage: "/assets/projects/wyrefi-cam-pixel.png",
   },
 ];

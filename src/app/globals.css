@@ -206,6 +206,12 @@ h1 {
 .project-card img {
   image-rendering: pixelated;
 }
+.project-art {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
 .placeholder-label {
   display: inline-block;
   margin-top: 14px;

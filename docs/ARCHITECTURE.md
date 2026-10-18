@@ -14,7 +14,7 @@ Next.js 16.4.2, React 19.3.1, TypeScript estrito e CSS global responsivo. Págin
 
 Adicionar um objeto Project real no array de `src/content/projects.ts`, com id e slug únicos, título, descrição, tags, categorias, status e featured. Apenas publicados e destacados aparecem na homepage. Os placeholders pertencem à UI e não ao array de conteúdo. Quando há destaques, são substituídos pelos cartões reais. URLs opcionais inválidas não são renderizadas. Os conteúdos são escapados pelo React; não há HTML arbitrário.
 
-A imagem de capa é um campo opcional reservado no tipo; o cartão V1 apresenta título, descrição, tags e links, preservando o layout simples. Não há páginas de detalhes. Não guardar informação privada em rascunhos: o código-fonte também poderá ser público.
+O campo opcional coverImage apresenta a identidade do projeto a 64×64 px, acima do título. O padrão para criar e adaptar imagens está em docs/PROJECT_ART.md. O cartão apresenta título, descrição, tags e links, preservando o layout simples. Não há páginas de detalhes. Não guardar informação privada em rascunhos: o código-fonte também poderá ser público.
 
 ## Decisões
 

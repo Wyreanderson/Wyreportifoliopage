@@ -4,6 +4,16 @@ import { safeUrl } from "@/lib/projects";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card">
+      {project.coverImage && (
+        <Image
+          className="project-art"
+          src={project.coverImage}
+          width={64}
+          height={64}
+          alt=""
+          unoptimized
+        />
+      )}
       <h3>{project.title}</h3>
       <p>{project.shortDescription}</p>
       <ul className="tags" aria-label="Technologies">

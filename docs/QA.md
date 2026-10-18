@@ -54,3 +54,11 @@ Perfil confirmado pelo proprietário: https://github.com/Wyreanderson. Links ati
 Autorizado pelo proprietário através do link https://github.com/Wyreanderson/WyreFi-Cam. Metadados e README públicos consultados: repositório público, licença MIT, TypeScript, webcam iPhone via Safari/WebRTC para OBS, self-hosted. Nenhum código desse repositório foi executado ou alterado.
 
 Adicionado como destaque publicado nas categorias open-source e self-hosted, com ligação apenas ao repositório. Nenhuma demo ou download foi presumido. Os quatro placeholders desaparecem conforme a regra original; há agora um cartão real. O estado vazio continua suportado e o filtro vazio é testado. Lint, TypeScript, 9 testes e build passaram; capturas atualizadas nas quatro larguras. Esta alteração substitui o requisito inicial de conteúdo vazio por autorização explícita do proprietário.
+
+## Identidade visual dos projetos
+
+Logo WyreFi Cam fornecida pelo proprietário adaptada com geração de imagem para pixel art monocromática. W, câmara e Wi-Fi preservados; PNG transparente (1254×1254, alpha no canto 0), integrado no cartão a 64×64 px com espaço reservado e alt vazio por repetir a identidade do título. Original preservada em docs/brand-references. Arte do portfólio em public/assets/projects/wyrefi-cam-pixel.png.
+
+Padrão permanente documentado em docs/PROJECT_ART.md e AGENTS.md: adaptar identidade existente ou gerar arte original baseada na função comprovada de cada novo projeto. Componente usa coverImage local, já disponível no tipo, sem dependência nova. Nenhum repositório externo alterado.
+
+Validação executada: pnpm lint, pnpm typecheck, pnpm test (9 aprovados), pnpm build. Capturas atualizadas nas quatro larguras; desktop inspecionado com a arte integrada. Sem violações axe, erros de consola ou overflow detetados pela suite.

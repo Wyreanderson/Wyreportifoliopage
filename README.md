@@ -24,3 +24,5 @@ pnpm build
 Adicionar projetos: editar apenas `src/content/projects.ts`, com conteúdo real e `status: 'published'`, `featured: true`. Links opcionais aceitam apenas HTTPS sem credenciais. Os quatro placeholders desaparecem quando existem destaques publicados. Configurar GitHub e contacto em `src/config/site.ts`; GitHub confirmado e ativo; contacto permanece nulo até ser informado.
 
 Referência aprovada: `docs/approved-reference.png`. Arquitetura, QA e publicação assistida em `docs/`. Nenhum deploy ou push é executado automaticamente.
+
+Padrão de arte dos projetos: [docs/PROJECT_ART.md](docs/PROJECT_ART.md). Cada novo projeto deve receber uma imagem pixel art coerente; logos fornecidas são adaptadas preservando a identidade.

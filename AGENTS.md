@@ -22,3 +22,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+
+## Imagens dos projetos
+
+Para cada novo projeto no portfólio, seguir docs/PROJECT_ART.md: adaptar a logo existente com identidade preservada, ou gerar arte original quando não houver imagem fornecida. Pixel art monocromática, PNG transparente quadrado, margem uniforme e exibição a 64×64 px. Guardar em public/assets/projects e configurar coverImage. Rever o cartão real antes do commit. Não modificar outros repositórios nem fazer push remoto por este procedimento.
