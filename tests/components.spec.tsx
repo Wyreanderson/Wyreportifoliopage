@@ -6,7 +6,7 @@ import { site } from "../src/config/site";
 import type { Project } from "../src/content/projects";
 
 test("external link configuration and safe rendering", () => {
-  expect(site.githubUrl).toBeNull();
+  expect(site.githubUrl).toBe("https://github.com/Wyreanderson");
   expect(site.contactEmail).toBeNull();
   const disabled = renderToStaticMarkup(
     <ExternalLink href={null}>GitHub</ExternalLink>,

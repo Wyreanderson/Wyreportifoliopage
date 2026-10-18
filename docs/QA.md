@@ -44,3 +44,7 @@ Pendências: URL GitHub confirmada, email opcional, aprovação visual, autoriza
 | P6   | ARCHITECTURE, DEPLOYMENT, QA e README revistos com referências oficiais                                                                  | Documentação pronta; deploy, DNS e push não executados. P7/P8 dependem do proprietário.                                                        |
 
 Comandos adicionais executados: `pnpm view next version`, `pnpm view react version`, `pnpm peers check`, `pnpm exec playwright install chromium`, `pnpm format`, `git diff --check`. A tentativa `pnpm pkg set` rejeitou uma chave com dois-pontos; a configuração foi escrita diretamente e validada. Os avisos NO_COLOR/FORCE_COLOR do runner não afetaram os testes.
+
+## Atualização do GitHub
+
+Perfil confirmado pelo proprietário: https://github.com/Wyreanderson. Links ativados no cabeçalho, hero e rodapé; aviso Coming soon do GitHub removido automaticamente. Suite de 9 testes repetida com sucesso e TypeScript aprovado. Capturas atualizadas. Apenas o contacto permanece nulo; referências anteriores a GitHub pendente registam o estado inicial da V1.

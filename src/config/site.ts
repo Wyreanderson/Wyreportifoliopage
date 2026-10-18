@@ -3,6 +3,6 @@ export const site = {
   url: "https://wyreanderson.com",
   description:
     "A public portfolio of tools, experiments, and useful systems you can explore, download, and run yourself.",
-  githubUrl: null as string | null,
+  githubUrl: "https://github.com/Wyreanderson" as string | null,
   contactEmail: null as string | null,
 };

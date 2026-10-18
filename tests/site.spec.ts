@@ -51,7 +51,7 @@ for (const [name, width, height] of [
     await expect(page.locator(".placeholder")).toHaveCount(4);
     await expect(page.locator('a[href="#"]')).toHaveCount(0);
     await expect(
-      page.locator('.hero-actions [aria-disabled="true"]'),
+      page.locator('.hero-actions a[href="https://github.com/Wyreanderson"]'),
     ).toContainText("Visit GitHub");
     for (const href of await page
       .locator('a[href^="#"]')
