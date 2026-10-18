@@ -1,0 +1,29 @@
+{
+  "url": "https://wyreanderson-portfolio.vercel.app/",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "imagesLoaded": true,
+      "noOverflow": true,
+      "canonical": "https://wyreanderson.com",
+      "og": "https://wyreanderson.com/assets/og-image.png"
+    },
+    {
+      "label": "mobile",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "imagesLoaded": true,
+      "noOverflow": true,
+      "canonical": "https://wyreanderson.com",
+      "og": "https://wyreanderson.com/assets/og-image.png"
+    }
+  ],
+  "resourceErrors": [],
+  "consoleErrors": [],
+  "secretSignatureMatches": [],
+  "passed": true
+}

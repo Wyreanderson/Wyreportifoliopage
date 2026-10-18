@@ -1,31 +1,44 @@
-# Publicação assistida — ainda não executada
+# Deployment — P8.1
 
-É necessária aprovação visual da V1 e autorização explícita para push, deploy e DNS. Nada foi publicado. A CI deste repositório apenas testa e compila; não possui tokens nem passo de deploy.
+## Projeto publicado
 
-## Preparação local
+- Projeto: wyreanderson-portfolio.
+- ID: prj_3npDQ8Wcr8yZl1ybDpFRgiprljNJ.
+- Equipa: wyreandersons-projects (team_Zs4c6oylLvVcqXWVz9zSHSgX).
+- Repositório: https://github.com/Wyreanderson/Wyreportifoliopage.
+- Branch de produção: main.
+- Commit enviado e usado como base do deployment: 91434ecdb04617870b85f5ea71a71bb6c1c3903e.
+- URL pública: https://wyreanderson-portfolio.vercel.app.
+- URL imutável: https://wyreanderson-portfolio-kmdh1aitu-wyreandersons-projects.vercel.app.
+- Deployment: dpl_7cwui3fnhWmdiHSi4ju2yfa6kpQR, estado Ready, target production.
+- Preview separada: ainda não criada; ver incidente abaixo.
 
-1. Confirmar URL real do perfil GitHub e email opcional em `src/config/site.ts`.
-2. Rever capturas desktop, tablet e mobile em `docs/screenshots/`.
-3. Executar `pnpm install --frozen-lockfile`, `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm build`.
-4. Pedir aprovação da versão exata antes de qualquer operação remota.
+## Método e configuração
 
-## Vercel, após autorização
+Primeiro push normal de main, sem force. A criação pelo conector falhou com 403; utilizada Vercel CLI oficial 54.4.1 com autenticação própria já existente. A conta e o ID da equipa foram confirmados. A CLI mostrou outros projetos existentes na equipa, embora o conector tivesse devolvido lista vazia; nenhum desses projetos foi alterado.
 
-Importar apenas este repositório e confirmar equipa/projeto. Preset Next.js, diretório raiz deste projeto, Node 24, instalação `pnpm install --frozen-lockfile`, build `pnpm build`, output padrão do Next. Não configurar export estático: o Next pré-renderiza a página e a Vercel fornece otimização de imagens. Não são necessárias variáveis de ambiente.
+Criado apenas o projeto acima e ligada a pasta através de .vercel/project.json, ignorado pelo Git. Publicação inicial por upload CLI. Posteriormente ligada a integração GitHub do mesmo repositório, com productionBranch main. A CI do primeiro push passou no GitHub: https://github.com/Wyreanderson/Wyreportifoliopage/actions/runs/39157751269.
 
-A integração Git pode gerar deploys automaticamente ao receber pushes. Ativar/vincular essa integração somente quando a publicação estiver autorizada. Testar a versão de preview e aprovar produção antes de associar o domínio.
+Framework Next.js, raiz da aplicação (rootDirectory null = raiz), Node 24.x, pnpm 11.25.0. Instalação npx --yes pnpm@11.25.0 install --frozen-lockfile; build pnpm build; output nativo. Nenhuma variável de ambiente criada, copiada ou exportada.
 
-## Domínio e www, após autorização separada
+## Ocorrência na sequência Preview → Production
 
-O canonical e o sitemap já usam `https://wyreanderson.com`. Em Settings > Domains, adicionar esse domínio e opcionalmente `www.wyreanderson.com`. Usar os registos exatos A/CNAME/TXT indicados pela Vercel para o projeto; não presumir um IP universal. Fazer a alteração no provedor DNS autoritativo, preservando MX, TXT de email e outros registos existentes.
+O comando inicial usou --target preview, mas a Vercel devolveu target production. Foi tentado cancelamento enquanto a build estava em curso; a API devolveu 400 porque já tinha terminado. Esse deployment está Ready e publicamente acessível. A revisão automática bloqueou duas tentativas seguintes de Preview pelo risco de nova classificação como Production; nenhuma dessas duas tentativas chegou a executar. Não se declara que a sequência Preview antes de Production tenha sido cumprida.
 
-Se www for adicionado, configurar redirecionamento permanente para `https://wyreanderson.com`, preservando caminhos. Confirmar propagação, HTTPS, destino do redirecionamento, canonical, robots, sitemap e imagem OG. Não é necessário transferir o domínio ou trocar nameservers para este fluxo.
+A produção existente foi verificada em Chromium desktop/mobile: HTTP 200, recursos carregados, links corretos, imagens/favicon/OG locais, menu, sem overflow, sem erros de consola ou de rede e sem correspondências nas assinaturas de segredos pesquisadas. Relatório em docs/P8.1-public-check.json e capturas em docs/screenshots/p8.1/. A revisão do fluxo Preview depende da resposta do proprietário à pergunta de autorização apresentada.
 
-## Reversão
+## Futuras atualizações
 
-Guardar a versão e registos DNS anteriores. Em caso de problema após publicação autorizada, reverter para o deployment anterior aprovado e verificar o domínio. Não apagar o projeto ou registos alheios.
+Executar pnpm install --frozen-lockfile, pnpm lint, pnpm typecheck, pnpm format:check, pnpm test e pnpm build. Rever o diff e criar commit. A integração Git foi ligada: um push autorizado em main poderá gerar Production automaticamente. Para alterações futuras, preferir branch de trabalho, Preview e revisão antes de merge/main. Confirmar sempre o target real retornado; não presumir Preview pelo argumento CLI.
 
-## Fontes oficiais consultadas
+Repetir a verificação pública com node scripts/verify-deployment.mjs https://wyreanderson-portfolio.vercel.app. O script apenas consulta a aplicação e guarda evidências locais; não publica nada.
 
-- [Next.js na Vercel](https://vercel.com/docs/frameworks/full-stack/nextjs)
-- [Adicionar e configurar domínio](https://vercel.com/docs/domains/working-with-domains/add-a-domain)
+## Rollback
+
+Este foi o primeiro deployment: não havia uma produção anterior deste projeto para restaurar. Guardar o ID acima como referência para futuras versões. Em publicações posteriores, anotar o deployment anterior aprovado. Usar vercel rollback com o ID/URL anterior e --scope wyreandersons-projects, verificando o projeto e URL antes da execução. O rollback pode suspender a atribuição automática de novos deployments até nova promoção; verificar o estado após reverter. Não apagar outros projetos nem modificar DNS.
+
+## P8.2 — ainda não autorizada nesta execução
+
+Só o domínio Vercel padrão está associado ao projeto. Não foram adicionados wyreanderson.com ou www.wyreanderson.com. Não foram alterados nameservers, DNS, MX, SPF, DKIM, DMARC ou email.
+
+P8.2 configurará domínio principal e www, HTTPS, redirecionamento, canonical, DNS e indexação, após nova aprovação. Canonical, sitemap e URLs absolutas OG ainda apontam ao domínio futuro por especificação original; a aplicação serve a imagem OG local corretamente, mas a URL absoluta social depende da ligação futura do domínio. Essa pendência deve ser resolvida antes de tratar a indexação do domínio como concluída.

@@ -66,3 +66,7 @@ Validação executada: pnpm lint, pnpm typecheck, pnpm test (9 aprovados), pnpm 
 ## Contacto via Instagram
 
 Por indicação do proprietário, Contact no rodapé aponta para https://www.instagram.com/wyreanderson/ e abre numa nova aba com noopener/noreferrer. Nome acessível identifica Instagram e perfil. Email continua nulo, sem impedir o contacto social. TypeScript e 9 testes passaram; capturas atualizadas.
+
+## P8.1 — verificações remotas
+
+O relatório atual de publicação está em [P8.1.md](P8.1.md), incluindo o incidente de classificação do primeiro deployment como Production, os bloqueios da revisão automática e a Preview ainda pendente. A URL Vercel existente passou na verificação pública desktop/mobile; evidências em P8.1-public-check.json. CI remota inicial passou. Domínio e DNS não foram alterados.
