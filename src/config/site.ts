@@ -5,4 +5,5 @@ export const site = {
     "A public portfolio of tools, experiments, and useful systems you can explore, download, and run yourself.",
   githubUrl: "https://github.com/Wyreanderson" as string | null,
   contactEmail: null as string | null,
+  instagramUrl: "https://www.instagram.com/wyreanderson/",
 };

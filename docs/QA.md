@@ -62,3 +62,7 @@ Logo WyreFi Cam fornecida pelo proprietário adaptada com geração de imagem pa
 Padrão permanente documentado em docs/PROJECT_ART.md e AGENTS.md: adaptar identidade existente ou gerar arte original baseada na função comprovada de cada novo projeto. Componente usa coverImage local, já disponível no tipo, sem dependência nova. Nenhum repositório externo alterado.
 
 Validação executada: pnpm lint, pnpm typecheck, pnpm test (9 aprovados), pnpm build. Capturas atualizadas nas quatro larguras; desktop inspecionado com a arte integrada. Sem violações axe, erros de consola ou overflow detetados pela suite.
+
+## Contacto via Instagram
+
+Por indicação do proprietário, Contact no rodapé aponta para https://www.instagram.com/wyreanderson/ e abre numa nova aba com noopener/noreferrer. Nome acessível identifica Instagram e perfil. Email continua nulo, sem impedir o contacto social. TypeScript e 9 testes passaram; capturas atualizadas.
