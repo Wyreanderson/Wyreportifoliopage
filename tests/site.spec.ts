@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { projects } from "../src/content/projects";
 import { featuredProjects, safeUrl } from "../src/lib/projects";
 test("content and URL safety", () => {
-  expect(featuredProjects(projects)).toHaveLength(1);
+  expect(featuredProjects(projects)).toHaveLength(2);
   expect(featuredProjects([])).toEqual([]);
   for (const url of [
     "",
@@ -50,12 +50,27 @@ for (const [name, width, height] of [
       "Building open-source & self-hosted projects",
     );
     await expect(page.locator(".placeholder")).toHaveCount(0);
-    await expect(page.locator(".project-card")).toHaveCount(1);
-    await expect(page.locator(".project-card h3")).toHaveText("WyreFi Cam");
-    await expect(page.locator(".project-card a")).toHaveAttribute(
+    await expect(page.locator(".project-card")).toHaveCount(2);
+    await expect(page.locator(".project-card h3")).toHaveText([
+      "WyreFi Cam",
+      "BTC Puzzle",
+    ]);
+    await expect(
+      page.locator(".project-card").first().locator("a"),
+    ).toHaveAttribute("href", "https://github.com/Wyreanderson/WyreFi-Cam");
+    const btcCard = page.locator(".project-card").nth(1);
+    await expect(btcCard.locator("p")).toContainText("coming soon");
+    await expect(btcCard.locator("a")).toHaveAttribute(
       "href",
-      "https://github.com/Wyreanderson/WyreFi-Cam",
+      "https://github.com/Wyreanderson/-projeto-BTC-Puzzle",
     );
+    await expect(btcCard.locator("img")).toHaveAttribute(
+      "src",
+      "/assets/projects/btc-puzzle-pixel.png",
+    );
+    await btcCard
+      .locator("img")
+      .evaluate((image: HTMLImageElement) => image.decode());
     await expect(page.locator('a[href="#"]')).toHaveCount(0);
     await expect(
       page.locator('.hero-actions a[href="https://github.com/Wyreanderson"]'),

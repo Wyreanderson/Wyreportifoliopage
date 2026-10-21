@@ -55,7 +55,7 @@ try {
       (await page.locator("h1").innerText()).includes("Building open-source"),
     );
     assert.equal(
-      await page.locator(".project-card h3").innerText(),
+      await page.locator(".project-card h3").first().innerText(),
       "WyreFi Cam",
     );
     assert.equal(

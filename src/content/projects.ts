@@ -31,4 +31,19 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Wyreanderson/WyreFi-Cam",
     coverImage: "/assets/projects/wyrefi-cam-pixel.png",
   },
+  {
+    id: "btc-puzzle",
+    slug: "btc-puzzle",
+    title: "BTC Puzzle",
+    shortDescription:
+      "A new project repository. Code and documentation coming soon.",
+    tags: ["Coming soon"],
+    // The public repository is currently empty and has no license or stack.
+    // Do not infer open-source licensing, hosting, or features from its name.
+    categories: [],
+    status: "published",
+    featured: true,
+    repoUrl: "https://github.com/Wyreanderson/-projeto-BTC-Puzzle",
+    coverImage: "/assets/projects/btc-puzzle-pixel.png",
+  },
 ];

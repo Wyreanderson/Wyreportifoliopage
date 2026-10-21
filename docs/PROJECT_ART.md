@@ -28,3 +28,7 @@ Aplicar a cada novo projeto adicionado a este portfólio. A preferência foi def
 ## WyreFi Cam
 
 Referência original fornecida pelo proprietário: docs/brand-references/wyrefi-cam-original.png. Preservar W, câmara/lente central e arcos Wi-Fi. Adaptação para o portfólio; a marca original e o repositório WyreFi-Cam não são alterados por este fluxo.
+
+## BTC Puzzle
+
+Repositório fornecido pelo proprietário: https://github.com/Wyreanderson/-projeto-BTC-Puzzle. Em 21/10/2026, a API GitHub confirmou repositório público vazio, sem README, stack ou licença. Arte original: duas peças de puzzle encaixadas, em cinzas, sem presumir funcionalidades financeiras ou técnicas. Ferramenta integrada image_gen; prompt final: duas peças de puzzle, silhueta compacta, pixel art monocromática, fundo transparente, margens de 15%, legível a 64×64 px, sem texto, moedas, marcas, brilho ou gradientes. Destino: public/assets/projects/btc-puzzle-pixel.png.

@@ -70,3 +70,13 @@ Por indicação do proprietário, Contact no rodapé aponta para https://www.ins
 ## P8.1 — verificações remotas
 
 O relatório atual de publicação está em [P8.1.md](P8.1.md), incluindo o incidente de classificação do primeiro deployment como Production, os bloqueios da revisão automática e a Preview ainda pendente. A URL Vercel existente passou na verificação pública desktop/mobile; evidências em P8.1-public-check.json. CI remota inicial passou. Domínio e DNS não foram alterados.
+
+## BTC Puzzle — 21/10/2026
+
+Pedido do proprietário: adicionar https://github.com/Wyreanderson/-projeto-BTC-Puzzle. API GitHub confirmou público, size 0; endpoint contents respondeu “This repository is empty”, README 404, sem descrição, linguagem ou licença. Cartão BTC Puzzle adicionado com texto neutro Coming soon, apenas ligação Repository e nenhuma tecnologia/categoria ou funcionalidade presumida. Published indica visibilidade do cartão/repositório, não uma aplicação lançada.
+
+Arte original gerada com ferramenta integrada image_gen conforme PROJECT_ART.md: duas peças de puzzle em tons de cinza, PNG transparente, public/assets/projects/btc-puzzle-pixel.png, exibição 64×64. Prompt e origem registados em PROJECT_ART.md. Nenhum ficheiro do repositório BTC foi alterado.
+
+Executados pnpm lint, pnpm typecheck, pnpm test e pnpm build: aprovados, 9 testes, sem violações axe, erros de consola ou overflow nas quatro larguras. Testes atualizados verificam os dois cartões, os destinos reais e o carregamento da imagem BTC. Capturas desktop/tablet/mobile/360 atualizadas; desktop revisto visualmente. Verificador remoto ajustado para aceitar vários cartões, sem o executar contra produção nesta alteração.
+
+Alteração guardada localmente, sem push/deploy. A versão pública Vercel não recebe o novo cartão até publicação autorizada.
