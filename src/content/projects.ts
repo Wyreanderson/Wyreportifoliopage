@@ -34,16 +34,16 @@ export const projects: Project[] = [
   {
     id: "btc-puzzle",
     slug: "btc-puzzle",
-    title: "BTC Puzzle",
+    title: "BTC Puzzle #71 Worker",
     shortDescription:
-      "A new project repository. Code and documentation coming soon.",
-    tags: ["Coming soon"],
-    // The public repository is currently empty and has no license or stack.
-    // Do not infer open-source licensing, hosting, or features from its name.
-    categories: [],
+      "Self-hosted Python/CUDA worker for Bitcoin Puzzle #71, with checkpoints, recovery and a local dashboard. Experimental v0.1.0.",
+    tags: ["Python", "CUDA", "Self-Hosted"],
+    categories: ["open-source", "self-hosted"],
     status: "published",
     featured: true,
     repoUrl: "https://github.com/Wyreanderson/-projeto-BTC-Puzzle",
+    docsUrl:
+      "https://github.com/Wyreanderson/-projeto-BTC-Puzzle/blob/main/docs/QUICKSTART.md",
     coverImage: "/assets/projects/btc-puzzle-pixel.png",
   },
 ];

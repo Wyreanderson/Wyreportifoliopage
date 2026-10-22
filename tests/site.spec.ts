@@ -53,16 +53,30 @@ for (const [name, width, height] of [
     await expect(page.locator(".project-card")).toHaveCount(2);
     await expect(page.locator(".project-card h3")).toHaveText([
       "WyreFi Cam",
-      "BTC Puzzle",
+      "BTC Puzzle #71 Worker",
     ]);
     await expect(
       page.locator(".project-card").first().locator("a"),
     ).toHaveAttribute("href", "https://github.com/Wyreanderson/WyreFi-Cam");
     const btcCard = page.locator(".project-card").nth(1);
-    await expect(btcCard.locator("p")).toContainText("coming soon");
-    await expect(btcCard.locator("a")).toHaveAttribute(
+    await expect(btcCard.locator("p")).toContainText("Experimental v0.1.0");
+    await expect(btcCard.locator("p")).not.toContainText("coming soon");
+    await expect(btcCard.locator(".tags li")).toHaveText([
+      "Python",
+      "CUDA",
+      "Self-Hosted",
+    ]);
+    await expect(
+      btcCard.getByRole("link", { name: /^Repository/ }),
+    ).toHaveAttribute(
       "href",
       "https://github.com/Wyreanderson/-projeto-BTC-Puzzle",
+    );
+    await expect(
+      btcCard.getByRole("link", { name: /^Documentation/ }),
+    ).toHaveAttribute(
+      "href",
+      "https://github.com/Wyreanderson/-projeto-BTC-Puzzle/blob/main/docs/QUICKSTART.md",
     );
     await expect(btcCard.locator("img")).toHaveAttribute(
       "src",

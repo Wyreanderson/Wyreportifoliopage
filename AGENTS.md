@@ -27,4 +27,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Para cada novo projeto no portfólio, seguir docs/PROJECT_ART.md: adaptar a logo existente com identidade preservada, ou gerar arte original quando não houver imagem fornecida. Pixel art monocromática, PNG transparente quadrado, margem uniforme e exibição a 64×64 px. Guardar em public/assets/projects e configurar coverImage. Rever o cartão real antes do commit. Não modificar outros repositórios nem fazer push remoto por este procedimento.
 
-- BTC Puzzle autorizado pelo proprietário em 21/10/2026. Repositório público ainda vazio: cartão Coming soon, sem tecnologias, funcionalidades ou licença presumidas.
+- BTC Puzzle autorizado pelo proprietário em 21/10/2026. Atualizado em 22/10/2026 pelo README real: BTC Puzzle #71 Worker, Python/CUDA, self-hosted, MIT, experimental v0.1.0. Não representar como scanner de carteiras arbitrárias nem prometer cobertura ou recompensa.

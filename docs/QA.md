@@ -80,3 +80,11 @@ Arte original gerada com ferramenta integrada image_gen conforme PROJECT_ART.md:
 Executados pnpm lint, pnpm typecheck, pnpm test e pnpm build: aprovados, 9 testes, sem violações axe, erros de consola ou overflow nas quatro larguras. Testes atualizados verificam os dois cartões, os destinos reais e o carregamento da imagem BTC. Capturas desktop/tablet/mobile/360 atualizadas; desktop revisto visualmente. Verificador remoto ajustado para aceitar vários cartões, sem o executar contra produção nesta alteração.
 
 Alteração guardada localmente, sem push/deploy. A versão pública Vercel não recebe o novo cartão até publicação autorizada.
+
+## BTC Puzzle — README atualizado em 22/10/2026
+
+README público lido integralmente: BTC Puzzle #71 Worker, experimental v0.1.0, orquestração Python/cuBitCrack/CUDA para o puzzle público autorizado #71. Documenta self-hosting, checkpoints, recuperação e dashboard local; MIT para o código próprio. Atualizados título, descrição, tags Python/CUDA/Self-Hosted e categorias open-source/self-hosted. Removida indicação Coming soon. Link Documentation confirmado pela API GitHub para docs/QUICKSTART.md. Arte existente mantida. Não foram executados worker, scans, pool, serviços ou código do outro repositório.
+
+pnpm lint, pnpm typecheck, pnpm test e pnpm build passaram; 9 testes, axe sem violações e sem overflow nas quatro larguras. Capturas atualizadas e desktop inspecionado visualmente. Testes conferem nome completo, estado experimental, tecnologias, imagem e links Repository/Documentation. Os registos de 21/10 sobre repositório vazio são históricos e foram superados por esta atualização.
+
+Commit local apenas, sem push/deploy. O site público mantém a versão anterior até publicação autorizada.

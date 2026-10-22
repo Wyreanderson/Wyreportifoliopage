@@ -32,3 +32,5 @@ Referência original fornecida pelo proprietário: docs/brand-references/wyrefi-
 ## BTC Puzzle
 
 Repositório fornecido pelo proprietário: https://github.com/Wyreanderson/-projeto-BTC-Puzzle. Em 21/10/2026, a API GitHub confirmou repositório público vazio, sem README, stack ou licença. Arte original: duas peças de puzzle encaixadas, em cinzas, sem presumir funcionalidades financeiras ou técnicas. Ferramenta integrada image_gen; prompt final: duas peças de puzzle, silhueta compacta, pixel art monocromática, fundo transparente, margens de 15%, legível a 64×64 px, sem texto, moedas, marcas, brilho ou gradientes. Destino: public/assets/projects/btc-puzzle-pixel.png.
+
+Atualização de 22/10/2026: README agora disponível identifica BTC Puzzle #71 Worker, experimental v0.1.0, Python/CUDA e licença MIT. A arte de puzzle existente foi mantida; o registo anterior descreve apenas a inspeção de 21/10/2026.
